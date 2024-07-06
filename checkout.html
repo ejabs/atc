@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Checkout</h1>
+        <div class="checkout-form">
+            <form id="billing-form" action="process_order.php" method="POST">
+                <div class="section">
+                    <h2>Billing Information</h2>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required>
+                    
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                    
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" required>
+                    
+                    <label for="zip">Zip Code</label>
+                    <input type="text" id="zip" name="zip" required>
+                    
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" required>
+                    
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="section">
+                    <h2>Order Notes</h2>
+                    <label for="notes">Notes about your order, e.g., special instructions for delivery.</label>
+                    <textarea id="notes" name="notes"></textarea>
+                </div>
+                
+                <div class="section">
+                    <div class="container" id="order">
+                  <h2>Your Order</h2>
+                    <div id="order-summary"></div>
+                    <p>Total: <span id="total-amount"></span></p>
+                </div>
+                
+                <button type="submit" class="submit-button">Place Order</button>
+            </form>
+        </div>      
+                    </div>
+                    
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
